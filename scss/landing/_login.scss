@@ -1,0 +1,50 @@
+.login-form, .sign-form { 
+    visibility:hidden;
+    position:absolute;
+    top:25%;
+    
+    a {
+        text-decoration: none;        
+    }
+    
+    input { 
+        width:100%;
+        font-size:24px;
+        margin-top:20px;
+        border-radius:6px;
+        background: rgba(255,255,255, 0.4);
+        padding:6px;
+        border:none;
+        
+    }
+    
+    ::-webkit-input-placeholder {
+           color: $offwhite;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: $offwhite;  
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: $offwhite;  
+        }
+
+        :-ms-input-placeholder {  
+           color: $offwhite;  
+    }
+    
+    a img{ 
+        margin-top:20px;
+    }
+
+    .forgot-password { 
+        margin-top:10px;
+    }
+    
+    .back-btn { 
+        font-size:26px;
+    }
+
+
+}

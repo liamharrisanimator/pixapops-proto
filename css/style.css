@@ -1,0 +1,297 @@
+body {
+    color:white;
+    font-family: 'Patrick Hand', cursive;
+       
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Patrick Hand SC', cursive;   
+}
+
+#fullpage {  
+     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2484c6+0,85d5f7+100 */
+    background: rgb(36,132,198); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(36,132,198,1) 0%, rgba(133,213,247,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(36,132,198,1)), color-stop(100%,rgba(133,213,247,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(36,132,198,1) 0%,rgba(133,213,247,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(36,132,198,1) 0%,rgba(133,213,247,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(36,132,198,1) 0%,rgba(133,213,247,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(36,132,198,1) 0%,rgba(133,213,247,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2484c6', endColorstr='#85d5f7',GradientType=0 ); /* IE6-9 */
+   
+}
+
+.page-slide .main {
+    position:relative;
+}
+
+
+#pixLogo {
+     -webkit-animation-duration: 4s;
+     -moz-animation-duration: 4s;
+     animation-duration: 4s;
+}
+
+.video-button { 
+    text-align:center; 
+}
+
+.vbox-overlay { 
+    background: rgba(36,132,198, 0.6); 
+}
+
+.vbox-close { 
+    background-color:transparent;   
+}
+
+.main .signup-button {
+    margin-top:15%;   
+}
+
+.signup-button { 
+    margin-top:0px;   
+}
+
+.signup-button #loginBtn { 
+    position:relative;
+    top:10px;
+}
+
+.nopad { 
+    padding:0;   
+}
+
+a, a:hover, a:visited {
+  color: #ffffff;
+    text-decoration: underline;
+}
+
+
+.side-title img { 
+    max-height:50px;
+    width:auto;
+    max-width:100%;
+}
+
+.carousel { 
+    top:20px;
+    position:static;
+}   
+
+.carousel-ineer.vertical {
+    padding:40px;   
+}
+
+.carousel-inner.vertical > .item {
+    -webkit-transition: .6s ease-in-out top;
+    -o-transition: .6s ease-in-out top;
+    transition: .6s ease-in-out top;
+    min-height: 400px;
+    width:100%;
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+  .carousel-inner.vertical > .item {
+    -webkit-transition: -webkit-transform .6s ease-in-out;
+    -o-transition: -o-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+  }
+  .carousel-inner.vertical > .item.next,
+  .carousel-inner.vertical > .item.active.right {
+    top: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  .carousel-inner.vertical > .item.prev,
+  .carousel-inner.vertical > .item.active.left {
+    top: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  .carousel-inner.vertical > .item.next.left,
+  .carousel-inner.vertical > .item.prev.right,
+  .carousel-inner.vertical > .item.active {
+    top: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.carousel-inner.vertical > .active {
+  top: 0;
+}
+.carousel-inner.vertical > .next,
+.carousel-inner.vertical > .prev {
+  top: 0;
+  height: 100%;
+  width: auto;
+}
+.carousel-inner.vertical > .next {
+  left: 0;
+  top: 100%;
+}
+.carousel-inner.vertical > .prev {
+  left: 0;
+  top: -100%
+}
+.carousel-inner.vertical > .next.left,
+.carousel-inner.vertical > .prev.right {
+  top: 0;
+}
+.carousel-inner.vertical > .active.left {
+  left: 0;
+  top: -100%;
+}
+.carousel-inner.vertical > .active.right {
+  left: 0;
+  top: 100%;
+}
+
+.carousel-inner.vertical img {
+    margin-top:20px;   
+}
+
+.carousel-indicators { 
+    bottom:auto;
+    left:0;
+    top:50%;
+    margin-left:-25px;
+}
+
+.carousel-indicators li { 
+    width:10px; 
+    height:10px; 
+    display:block;
+    margin-bottom:4px;
+}
+
+.carousel-indicators li.active { 
+    margin-bottom:3px;   
+}
+
+.carousel-inner.vertical p { 
+    font-size:22px;     
+}
+
+.carousel-inner.vertical .artists p { 
+    font-size:18px;     
+}
+
+.control-footer {
+    position:relative; 
+}
+
+.control-footer .carousel-control {
+    position:relative;   
+    font-size:40px;
+    opacity:1;
+    text-shadow: none;
+}
+
+@media (max-width:768px) {
+    .fp-controlArrow {
+        display:none;   
+    }
+}
+
+
+#ocean { 
+    position:fixed; 
+    z-index:0;
+    background-image:url('../img/ocean.png');
+    bottom:0;
+    width:120%; 
+    height:30%;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    animation-duration: 8s;
+}
+
+#island1 { 
+    position:fixed; 
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index:0;
+    background-image:url('../img/island1.png');
+    bottom:25%;
+    left:20%;
+    width:20%; 
+    height:30%;
+    opacity:0.3;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    animation-duration: 8s;
+    
+}
+
+#island2 { 
+    position:fixed; 
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index:0;
+    background-image:url('../img/island2.png');
+    bottom:25%;
+    right:10%;
+    width:30%; 
+    height:30%;
+    opacity:0.8;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    animation-duration: 8s;
+    
+}
+
+#boat { 
+    position:fixed; 
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index:0;
+    background-image:url('../img/boat.png');
+    bottom:10%;
+    left:5%;
+    width:30%; 
+    height:30%;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    animation-duration: 8s;
+    
+}
+
+
+
+.who { 
+    position:absolute; 
+    top:37%; 
+    width:130px;
+    height:auto;
+    display:block;
+    text-align:center;
+}
+
+.who.left { 
+    left:50px;   
+}
+
+.who.right { 
+    right:50px;  
+}
+
+@media (max-width:767px) { 
+    .carousel-inner.vertical p { 
+        font-size:16px;     
+    }
+       
+}
+
+@media (max-width:600px) { 
+    .who {
+        display:none;   
+    }
+}

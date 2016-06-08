@@ -1,0 +1,30 @@
+.login-form, .sign-form {
+  visibility: hidden;
+  position: absolute;
+  top: 25%; }
+  .login-form a, .sign-form a {
+    text-decoration: none; }
+  .login-form input, .sign-form input {
+    width: 100%;
+    font-size: 24px;
+    margin-top: 20px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 6px;
+    border: none; }
+  .login-form ::-webkit-input-placeholder, .sign-form ::-webkit-input-placeholder {
+    color: #ededed; }
+  .login-form :-moz-placeholder, .sign-form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ededed; }
+  .login-form ::-moz-placeholder, .sign-form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ededed; }
+  .login-form :-ms-input-placeholder, .sign-form :-ms-input-placeholder {
+    color: #ededed; }
+  .login-form a img, .sign-form a img {
+    margin-top: 20px; }
+  .login-form .forgot-password, .sign-form .forgot-password {
+    margin-top: 10px; }
+  .login-form .back-btn, .sign-form .back-btn {
+    font-size: 26px; }
