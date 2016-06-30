@@ -1,0 +1,226 @@
+body {
+	width: 1000;
+	height: 1000;
+	margin-left: auto;
+    margin-right: auto; 
+	overflow-x: hidden; 
+    overflow-y: hidden;
+	background-color: #66ccff;
+}
+
+#top-container {
+	bottom: 100%;
+}
+
+
+#character1 {
+	position: absolute;
+	width:128px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/character1.png') left center;
+	animation: play1 1.0s steps(8) infinite;
+}
+
+@keyframes play1 {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }	
+}
+
+#movement1 {
+    position: relative;
+    animation-name: char1;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes char1 {
+    0%   {left:0px; top:165px;}
+	99%  { opacity: 1; }
+	100% {left:500px; top:165px;}
+	100%  { opacity: 0; }
+}
+
+#character1idle {
+	position: absolute;
+	width:128px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/character1 idle.png') left center;
+	animation: play1idle 1.3s steps(8) infinite;
+}
+
+@keyframes play1idle {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }
+	
+}
+
+#appear1 {
+    position: relative;
+    animation-name: show1;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes show1 {
+    0%   {left:0px; top:165px;}
+	0%  { opacity: 0; }
+	99%  { opacity: 0; }
+	100% {left:500px; top:165px;}
+	100%  { opacity: 1; }
+}
+
+#character2 {
+	position: absolute;
+	width:149px;
+	height:296px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/character2.png') left center;
+	animation: play2 1.0s steps(8) infinite;
+}
+
+@keyframes play2 {
+	0% { background-position: 1189px; }
+	100% { background-position: 0; }
+	
+}
+
+#movement2 {
+    position: relative;
+    animation-name: char2;
+    animation-duration: 3.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes char2 {
+    0%   {left:-150px; top:165px;}
+	99%  { opacity: 1; }
+	100% {left:350px; top:165px;}
+	100%  { opacity: 0; }
+}
+
+#character2idle {
+	position: absolute;
+	width:139px;
+	height:296px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/character2 idle.png') left center;
+	animation: play2idle 1.3s steps(8) infinite;
+}
+
+@keyframes play2idle {
+	0% { background-position: 1115px; }
+	100% { background-position: 0; }
+	
+}
+
+#appear2 {
+
+    position: relative;
+    animation-name: show2;
+    animation-duration: 3.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes show2 {
+    0%   {left:-150px; top:165px;}
+	0%  { opacity: 0; }
+	99%  { opacity: 0; }
+	100% {left:350px; top:165px;}
+	100%  { opacity: 1; }
+}
+
+#character3 {
+	position: absolute;
+	width:128px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/character3.png') left center;
+	animation: play1 1.0s steps(8) infinite;
+}
+
+@keyframes play3 {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }	
+}
+
+#movement3 {
+    position: relative;
+    animation-name: char3;
+    animation-duration: 3.4s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes char3 {
+    0%   {left:-300px; top:165px;}
+	99%  { opacity: 1; }
+	100% {left:200px; top:165px;}
+	100%  { opacity: 0; }
+}
+
+#character3idle {
+	position: absolute;
+	width:128px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/character3 idle.png') left center;
+	animation: play3idle 1.3s steps(8) infinite;
+}
+
+@keyframes play3idle {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }
+	
+}
+
+#appear3 {
+    position: relative;
+    animation-name: show3;
+    animation-duration: 3.4s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes show3 {
+    0%   {left:-300px; top:165px;}
+	0%  { opacity: 0; }
+	99%  { opacity: 0; }
+	100% {left:200px; top:165px;}
+	100%  { opacity: 1; }
+}
+
+#background {
+	width: 1024px;
+	height:768px;
+	background: url('../../img/choose-character/tree.png') left center;
+}
+  
+#follower{
+  position : absolute;
+}
+
+
+#owl {
+	width:128px;
+	height:128px;
+	margin: 1% auto;
+	background: url('../../img/choose-character/owl.png') left center;
+	animation: owl 0.5s steps(4) infinite;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+@keyframes owl {
+	0% { background-position: 512px; }
+	100% { background-position: 0; }	
+}
+

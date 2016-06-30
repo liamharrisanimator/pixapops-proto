@@ -1,2 +1,205 @@
 body {
-  margin: 0 !important; }
+	width: 1000;
+	height: 1000;
+	margin-left: auto;
+    margin-right: auto; 
+	overflow-x: hidden; 
+    overflow-y: hidden;
+
+	background-color: #66ccff;
+}
+ 
+#wavecontainer{
+	position: absolute;
+
+	top: 32%;
+    width: 100%;
+	z-index: -1;
+	
+}
+  
+#follower{
+  position : absolute;
+  transform: translateZ(0);
+  z-index: -1;
+}
+
+#boat {
+	top: 200px;
+	position : absolute;
+	left: 50px;
+	width:128px;
+	height:128px;
+	margin: 1% auto;
+	background: url('../../img/choose/boat.png') left center;
+	animation: boat 1.0s steps(8) infinite;
+	transform: rotateY(0deg);
+}
+
+@keyframes boat {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }
+}
+
+#boatstop{
+	position: absolute;
+	top: 175px;
+	left: -50px;
+	width: 100px;
+	height: 150px;
+	/*background-color: blue;*/
+	display: block;
+}
+
+
+#flipboat{
+	top: -250px;
+	bottom: -600px;
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	/*background-color: red;*/	
+}
+
+#flipboat:hover #boat {
+    transform: rotateY(180deg);
+}
+
+#boatstop:hover ~ #boat {
+	background: url('../../img/choose/boatstill.png') left center;
+	animation: still 1.0s steps(4) infinite;
+
+}
+
+@keyframes still {
+	0% { background-position: 512px; }
+	100% { background-position: 0; }
+	
+}
+
+#wave {
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose/waveanimation.png') left center;
+	animation: wave 3.0s steps(13) infinite;
+}
+
+@keyframes wave {
+	0% { background-position: 6656px; }
+	100% { background-position: 0; }
+	
+}
+
+#adventureIslandContainer {
+	width:200px;
+	height:200px;
+	position: absolute;
+    top: 550px;
+    left: 100px;
+	z-index: 5;
+	background: green;
+}
+
+#adventureIsland {
+	position: absolute;
+	top:-200px;
+	right: -200px;
+	width:512px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose/adventure island.png') left center;
+	animation: adventure 1.5s steps(4) infinite;
+	pointer-events: none;
+}
+
+@keyframes adventure {
+	0% { background-position: 2048px; }
+	100% { background-position: 0; }	
+}
+
+#adventureIslandContainer:hover #adventureIsland {
+	animation: adventurehover 1.5s steps(4) infinite;
+}
+
+@keyframes adventurehover {
+	0% { background-position: 2048px; }
+	50% { opacity: 0.5; }
+	100% { background-position: 0; }	
+}
+
+
+#playtimeIslandContainer {
+	width:200px;
+	height:200px;
+	position: absolute;
+    top: 550px;
+    right: 200px;
+	z-index: 5;
+	background: green;
+}
+
+#playtimeIsland {
+	position: absolute;
+	top:-200px;
+	right: -200px;
+	width:512px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose/playtime island.png') left center;
+	animation: playtime 1.5s steps(4) infinite;
+	pointer-events: none;
+}
+
+
+@keyframes playtime {
+	0% { background-position: 2048px; }
+	100% { background-position: 0; }	
+}
+
+#playtimeIslandContainer:hover #playtimeIsland {
+	animation: playtimehover 1.5s steps(4) infinite;
+}
+
+@keyframes playtimehover {
+	0% { background-position: 2048px; }
+	50% { opacity: 0.5; }
+	100% { background-position: 0; }	
+}
+
+#sleeptimeIslandContainer {	
+	width:200px;
+	height:200px;
+	position: absolute;
+    top: 350px;
+    right: 450px;
+	z-index: 5;
+	background: green; 
+}
+
+#sleeptimeIsland {
+	position: absolute;
+	top:-200px;
+	right: -200px;
+	width:512px;
+	height:512px;
+	margin: 1% auto;
+	background: url('../../img/choose/sleeptime island.png') left center;
+	animation: sleeptime 1.5s steps(4) infinite;
+	pointer-events: none;
+}
+
+
+@keyframes sleeptime {
+	0% { background-position: 1900px; }
+	100% { background-position: 0; }	
+}
+
+#sleeptimeIslandContainer:hover #sleeptimeIsland {
+	animation: sleeptimehover 1.5s steps(4) infinite;
+}
+
+@keyframes sleeptimehover {
+	0% { background-position: 1900px; }
+	50% { opacity: 0.5; }
+	100% { background-position: 0; }	
+}

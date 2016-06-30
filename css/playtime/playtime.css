@@ -1,0 +1,174 @@
+body {
+	width: 1000;
+	height: 1000;
+	margin-left: auto;
+    margin-right: auto; 
+	overflow-x: hidden; 
+    overflow-y: hidden;
+	background-color: #66ccff;
+}
+
+#playground {
+	width: 1024px;
+	height:768px;
+	margin: 1% auto;
+	background: url('../../img/play/playground.png') left center;
+	animation: playground 1.5s steps(6) infinite;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+@keyframes playground {
+	0% { background-position: 6144px; }
+	100% { background-position: 0; }
+	
+}
+
+#playerFollower {
+	position : absolute;
+	top: 60%;
+	z-index: 1;
+}
+
+#player {
+	width:128px;
+	height:512px;
+	margin: 1% auto;
+	position : absolute;
+	left: -50px;
+	bottom: -200px;
+	background: url('../../img/play/player.png') left center;
+	animation: player 1.0s steps(8) infinite;
+	transform: rotateY(180deg);
+	pointer-events: none;
+}
+
+@keyframes player {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }
+	
+}
+  
+#follower{
+  position : absolute;
+}
+
+#playerstop{
+	position: absolute;
+	top: 0%;
+	left: -100px;
+	width: 200px;
+	height: 786px;
+	display: block;
+}
+
+
+#flipplayer{
+	bottom: -320px;
+	position: absolute;
+	width: 800px;
+	height: 786px;
+}
+
+#flipplayer:hover #player {
+    transform: rotateY(0deg);
+
+}
+
+
+
+#playerstop:hover ~ #player {
+	background: url('../../img/play/player still.png') left center;
+	animation: still 1.4s steps(8) infinite;
+
+}
+
+@keyframes still {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }	
+}
+
+#owl {
+	width:128px;
+	height:128px;
+	margin: 1% auto;
+	background: url('../../img/play/owl.png') left center;
+	animation: owl 0.5s steps(4) infinite;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+@keyframes owl {
+	0% { background-position: 512px; }
+	100% { background-position: 0; }
+	
+}
+
+#butterfly {
+	width:64px;
+	height:128px;
+	margin: 1% auto;
+	background: url('../../img/play/butterfly.png') left center;
+	animation: fly 0.2s steps(2) infinite;
+	pointer-events: none;
+}
+
+@keyframes fly {
+	0% { background-position: 128px; }
+	100% { background-position: 0; }
+	
+}
+
+#butterflymove {
+    position: relative;
+    animation-name: move;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	pointer-events: none;
+}
+
+@-webkit-keyframes move {
+    0%   {left:550px; top:-500px;}
+    100% {left:-550px; top:-500px;}
+}
+
+
+#butterflymoveupdown {
+	position: relative;
+    animation-name: updown;
+    animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	pointer-events: none;
+}
+
+@-webkit-keyframes updown {
+    0%   {left:0px; top:100px;}
+    50%  {left:0px; top:0px;}
+	100% {left:0px; top:100px;}
+}
+
+#dog {
+	position: relative;
+	width: 128px;
+	height:256px;
+	right: 190px;
+	bottom: 380px;
+	margin: 1% auto;
+	background: url('../../img/play/dog.png') left center;
+	animation: wagging 0.3s steps(4) infinite;
+	
+}
+
+@keyframes wagging {
+	0% { background-position: 512px; }
+	100% { background-position: 0; }
+	
+}

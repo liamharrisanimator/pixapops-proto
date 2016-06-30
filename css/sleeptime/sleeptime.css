@@ -1,0 +1,164 @@
+body {
+	width: 1000;
+	height: 1000;
+	margin-left: auto;
+    margin-right: auto; 
+	overflow-x: hidden; 
+    overflow-y: hidden;
+	background-color: #66ccff;
+}
+
+#top-container {
+	bottom: 100%;
+}
+
+#bear {
+	width:128px;
+	height:256px;
+	margin: 1% auto;
+	background: url('../../img/sleep/bear.png') left center;
+	animation: play 1.0s steps(8) infinite;
+}
+
+@keyframes play {
+	0% { background-position: 1024px; }
+	100% { background-position: 0; }
+	
+}
+
+#movement {
+    position: relative;
+    animation-name: example;
+    animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes example {
+    0%   {left:-600px; top:550px;}
+    100% {left:600px; top:550px;}
+}
+
+
+
+#bedroom {
+	width: 1024px;
+	height:768px;
+	margin: 1% auto;
+	background: url('../../img/sleep/bedroom.png') left center;
+}
+
+
+
+
+
+#playerFollower {
+	position : absolute;
+	top: 75%;
+}
+
+
+#player {
+	width:192px;
+	height:768px;
+	margin: 1% auto;
+	position : absolute;
+	left: -50px;
+	bottom: -200px;
+	background: url('../../img/sleep/player.png') left center;
+	animation: player 1.0s steps(8) infinite;
+	transform: rotateY(180deg);
+	pointer-events: none;
+}
+
+@keyframes player {
+	0% { background-position: 1536px; }
+	100% { background-position: 0; }	
+}
+  
+#follower{
+  position : absolute;
+}
+
+#playerstop{
+	position: absolute;
+	top: 0%;
+	left: -100px;
+	width: 200px;
+	height: 786px;
+	display: block;
+}
+
+
+#flipplayer{
+	bottom: -320px;
+	position: absolute;
+	width: 800px;
+	height: 786px;
+}
+
+#flipplayer:hover #player {
+    transform: rotateY(0deg);
+}
+
+
+
+#playerstop:hover ~ #player {
+	background: url('../../img/sleep/player still.png') left center;
+	animation: still 1.4s steps(8) infinite;
+}
+
+@keyframes still {
+	0% { background-position: 1536px; }
+	100% { background-position: 0; }	
+}
+
+/*
+#playerFollower {
+	position : absolute;
+	top: 40%;
+}
+
+#player {
+	width:192px;
+	height:768px;
+	margin: 1% auto;
+	background: url('player.png') left center;
+	animation: player 1.0s steps(8) infinite;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+@keyframes player {
+	0% { background-position: 1536px; }
+	100% { background-position: 0; }
+	
+}
+  
+#follower{
+  position : absolute;
+}
+*/
+
+
+#owl {
+	width:128px;
+	height:128px;
+	margin: 1% auto;
+	background: url('../../img/sleep/owl.png') left center;
+	animation: owl 0.5s steps(4) infinite;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+@keyframes owl {
+	0% { background-position: 512px; }
+	100% { background-position: 0; }	
+}
+

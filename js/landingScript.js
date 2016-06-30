@@ -59,7 +59,7 @@ function enterPixapops() {
         }, 3000);
     
     setTimeout(function(){
-        window.location.replace("choose-island.html");
+        window.location.replace("iframe-holder.html");
         }, 4000);
 }
 
