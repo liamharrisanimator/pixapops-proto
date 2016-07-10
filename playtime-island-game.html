@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head><!DOCTYPE html>
+<html>
+<head>
+    <title>Playtime Island</title>
+    <link href="css/playtime/playtime.css" rel="stylesheet">
+    <script src="js/jquery144.js" type=
+    "text/javascript">
+    </script>
+    <script src="js/playtimeScript.js">
+    </script>
+
+
+
+<script>
+    var clicks = 0; //counts how may picks have been made in each turn
+    var firstchoice; //stores index of first card selected
+    var secondchoice; //stores index of second card selected
+
+    var match = 0; //counts matches made
+    var backcard = "img/play-game/guess.png"; //shows back of card when turned over
+
+
+    var faces = []; //array to store card images
+    faces[0] = 'img/play-game/image1.png';
+    faces[1] = 'img/play-game/image2.png';
+    faces[2] = 'img/play-game/image3.png';
+    faces[3] = 'img/play-game/image3.png';
+    faces[4] = 'img/play-game/image1.png';
+    faces[5] = 'img/play-game/image2.png';
+
+    function choose(card) {
+            if (clicks == 2) {
+                return;
+            }
+            if (clicks == 0) {
+                firstchoice = card;
+                document.images[card].src = faces[card];
+                clicks = 1;
+            } else {
+                clicks = 2;
+                secondchoice = card;
+                document.images[card].src = faces[card];
+                timer = setInterval("check()", 1000);
+            }
+        }
+        /* Check to see if a match is made */
+
+    function check() {
+    clearInterval(timer); //stop timer
+    clicks = 0;
+    if (faces[secondchoice] == faces[firstchoice]) {
+        match++;
+        document.getElementById("matches").innerHTML = match;
+    } else {
+        document.images[firstchoice].src = backcard;
+        document.images[secondchoice].src = backcard;
+        return;
+    }
+}
+</script>
+</head>
+
+<body>
+
+<a href="chooseiframe.html">
+    <div id="back"></div>
+	</a>
+
+    <div id="playground">
+		
+		<div id="gameframe">
+	
+			 <a href="javascript:choose(0)"><img src="img/play-game/guess.png" width=200px height=300px /></a>
+
+			 <a href="javascript:choose(1)"><img src="img/play-game/guess.png" width=200px height=300px /></a>
+
+			 <a href="javascript:choose(2)"><img src="img/play-game/guess.png" width=200px height=300px /></a>
+
+			 <br>
+
+			 <a href="javascript:choose(3)"><img src="img/play-game/guess.png" width=200px height=300px/></a>
+
+			<a href="javascript:choose(4)"><img src="img/play-game/guess.png" width=200px height=300px /></a>
+
+			<a href="javascript:choose(5)"><img src="img/play-game/guess.png" width=200px height=300px /></a>
+
+			<br>
+
+			<!--	<b style="font-size:40px;"> MATCHES :</b>
+			<b style="font-size:60px;" id="matches"> 0 </b> -->
+	
+		</div>
+
+	
+    </div>
+
+
+ 
+
+</body>
+
+</html>

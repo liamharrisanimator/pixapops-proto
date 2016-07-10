@@ -3,7 +3,7 @@
 <head>
     <title>user select</title>
     <link href="css/choose-character/character.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.4.4.min.js" type=
+    <script src="js/jquery144.js" type=
     "text/javascript">
     </script>
     <script src="js/characterScript.js">
@@ -11,9 +11,22 @@
 </head>
 
 <body oncontextmenu="return false">
+	
+	
+	<a href="parent-portal.html">
+	<div id="parent-portal">
+        Parent Portal
+    </div>
+	</a>
+
     <div id="background">
         <a href="chooseiframe.html">
         <div id="top-container">
+		
+		<div id="names">Rob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						Tina&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						Tim</div>
+		
             <div id="appear1">
                 <div id="character1idle">
                 </div>
@@ -50,9 +63,55 @@
             </div>
         </div></a>
     </div>
-    <!-- stops opening pages in new tabs  -->
+	
+	<!-- fade in-->
+<script language="javascript">
+$(document).ready(function(){
 
+/*! Fades in whole page on load */
+$('body').css('display', 'none');
+$('body').fadeIn(500);
 
+}); 
+
+/*! Reloads page on every visit */
+function Reload() {
+try {
+var headElement = document.getElementsByTagName("head")[0];
+if (headElement && headElement.innerHTML)
+headElement.innerHTML += "<meta http-equiv=\"refresh\" content=\"1\">";
+}
+catch (e) {}
+}
+
+/*! Reloads on every visit in mobile safari */
+if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
+window.onpageshow = function(evt) {
+if (evt.persisted) {
+document.body.style.display = "none";
+location.reload();
+}
+};
+}
+</script>
+	
+	<!-- fade  -->
+	<script language="javascript">
+
+ $('a').click(function(e) {
+ e.preventDefault();
+ newLocation = this.href;
+ $('body').fadeOut('slow', newpage);
+ });
+ function newpage() {
+ window.location = newLocation;
+ }
+
+ </script>
+ 
+ 
+    
+	<!-- stops opening pages in new tabs  -->
     <div id="follower">
         <div id="owl">
         </div>

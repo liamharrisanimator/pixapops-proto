@@ -5,7 +5,36 @@ body {
     margin-right: auto; 
 	overflow-x: hidden; 
     overflow-y: hidden;
-	background-color: #66ccff;
+}
+
+#back {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	width:100px;
+	height:100px;
+	z-index: 80;
+	background: url('../../img/back small.png') left center;
+}
+
+#book {
+	position: absolute;
+	top: 86%;
+	right: 10%;
+	width:100px;
+	height:100px;
+	z-index: 80; 
+	background: url('../../img/first met/1.png') left center;
+	background-size: 100px 100px;
+    background-repeat: no-repeat;
+}
+
+#playgame {
+	position: absolute;
+	left: 450px;
+	width:100px;
+	height:200px;
+	z-index: 80; 
 }
 
 #top-container {
@@ -32,6 +61,10 @@ body {
     animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+	-moz-animation-name: example;
+    -moz-animation-duration: 20s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
 }
 
 @-webkit-keyframes example {
@@ -39,7 +72,10 @@ body {
     100% {left:600px; top:550px;}
 }
 
-
+@-moz-keyframes example {
+    0%   {left:-600px; top:550px;}
+    100% {left:600px; top:550px;}
+}
 
 #bedroom {
 	width: 1024px;
@@ -47,9 +83,6 @@ body {
 	margin: 1% auto;
 	background: url('../../img/sleep/bedroom.png') left center;
 }
-
-
-
 
 
 #playerFollower {
@@ -78,6 +111,7 @@ body {
   
 #follower{
   position : absolute;
+  pointer-events: none;
 }
 
 #playerstop{
@@ -111,6 +145,33 @@ body {
 @keyframes still {
 	0% { background-position: 1536px; }
 	100% { background-position: 0; }	
+}
+
+
+#flipbookappear {
+	position: relative;
+    animation-name: bookappear;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	-moz-animation-name: bookappear;
+    -moz-animation-duration: 2s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes bookappear {
+    0%   {left:0px; top:-500px;}
+	0%  { opacity: 0; }
+	100% {left:0px; top:200px;}
+	100%  { opacity: 1; }
+}
+
+@-moz-keyframes bookappear {
+    0%   {left:0px; top:-500px;}
+	0%  { opacity: 0; }
+	100% {left:0px; top:200px;}
+	100%  { opacity: 1; }
 }
 
 /*
@@ -160,5 +221,77 @@ body {
 @keyframes owl {
 	0% { background-position: 512px; }
 	100% { background-position: 0; }	
+}
+
+#gameframe {
+	position: absolute;
+	margin-left: 200px;
+	margin-top: 50px;
+}
+
+/* turnjs */
+
+#flipbook{
+	position: relative;
+	top: 30%;
+	right: -10%;
+    width:800px;
+    height:400px;
+}
+
+#flipbook .page{
+    width:800px;
+    height:400px;
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+}
+
+#flipbook .page-wrapper{
+    -webkit-perspective:2000px;
+    -moz-perspective:2000px;
+    -ms-perspective:2000px;
+    -o-perspective:2000px;
+    perspective:2000px;
+}
+
+#flipbook .hard{
+    background:#ccc !important;
+    color:#333;
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+    font-weight:bold;
+}
+
+#flipbook .odd{
+    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
+    background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;   
+}
+
+#flipbook .even{
+    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
 }
 

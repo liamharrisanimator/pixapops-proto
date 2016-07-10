@@ -1,0 +1,181 @@
+body {
+	width: 1000;
+	height: 1000;
+	margin-left: auto;
+    margin-right: auto; 
+	overflow-x: hidden; 
+
+}
+
+#back {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	width:100px;
+	height:100px;
+	z-index: 80;
+	background: url('../../img/back small.png') left center;
+}
+
+
+
+#background {
+	width: 1024px;
+	min-height: 2100px;
+	background-repeat: no-repeat;
+	background: url('../../img/treeblur.png') left center;
+	background-attachment: fixed;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 500%;
+}
+  
+#box {
+	border-top: 5px solid white;
+	margin-top: 20px;
+	position: relative;
+	float: left;
+	left: 20px;
+	width: 600px;
+	height: 600px;
+}
+
+#advert {
+	margin-top: 30px;
+	/*border: 2px solid black;*/
+	position: relative;
+	left: 640px;
+	width: 350px;
+	height: 1836px;
+	background: url('../../img/advert.png') left center;
+}
+
+#user-img1 {
+	margin-top: 5px;
+	position: relative;
+	border: 5px solid white;
+	top: 1%;
+	left: 1%;
+	width:200px;
+	height:200px;
+	z-index: 80;
+	background: url('../../img/character1.png') left center;
+	float: left;
+}
+
+#user-img2 {
+	margin-top: 5px;
+	position: relative;
+	border: 5px solid white;
+	top: 1%;
+	left: 1%;
+	width:200px;
+	height:200px;
+	z-index: 80;
+	background: url('../../img/character2.png') left center;
+	float: left;
+}
+
+#user-img3 {
+	margin-top: 5px;
+	position: relative;
+	border: 5px solid white;
+	top: 1%;
+	left: 1%;
+	width:200px;
+	height:200px;
+	z-index: 80;
+	background: url('../../img/character3.png') left center;
+	float: left;
+}
+
+#name {
+	margin-top: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	position: absolute;
+	left: 250px;
+	text-align: left;
+}
+
+#statistics1 {
+	font-size: 55%;
+}
+
+#badges {
+	position: relative;
+	left: 1%;
+	text-align: left;
+	margin-top: 225px;
+	font-size: 35%;
+	margin-bottom: 15px;
+}
+
+#barcharts {
+	margin-top: 15px;
+	font-size: 35%;
+	text-align: right;
+	left: 20px;
+	float: left;
+}
+
+#barpercentage {
+	position: absolute;
+	margin-top: 15px;
+	font-size: 35%;
+	text-align: right;
+	right: 0px;
+	float: right;
+	top: 340px;
+}
+
+#bar1 {
+	background: url('../../img/bar.png') left center;
+	position: relative;
+	top: 21px;
+	left: 265px;
+	width:200px;
+	height:20px;
+	z-index: 80;
+	margin-bottom: 14px;
+}
+
+#bar2 {
+	background: url('../../img/bar.png') left center;
+	position: relative;
+	top: 21px;
+	left: 265px;
+	width:130px;
+	height:20px;
+	z-index: 80;
+	margin-bottom: 14px;
+}
+
+#bar3 {
+	background: url('../../img/bar.png') left center;
+	position: relative;
+	top: 21px;
+	left: 265px;
+	width:100px;
+	height:20px;
+	z-index: 80;
+	margin-bottom: 14px;
+}
+
+#favoriteBooks {
+	position: absolute;
+	margin-top: 15px;
+	font-size: 35%;
+	text-align: left;
+	left: 0px;
+	top: 475px;
+	font-size: 50%;
+}
+
+#books {
+	position: absolute;
+	left: 175px;
+	top: 475px;
+}

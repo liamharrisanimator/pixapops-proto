@@ -6,12 +6,29 @@ body {
 	overflow-x: hidden; 
     overflow-y: hidden;
 
-	background-color: #66ccff;
+}
+
+#background {
+	position: absolute;
+	width: 1024px;
+	height:768px;
+	background: url('../../img/sky choose.png') left center;
+	background-size: 100%;
+	z-index: -50;
+}
+ 
+#back {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	width:100px;
+	height:100px;
+	z-index: 80;
+	background: url('../../img/back small.png') left center;
 }
  
 #wavecontainer{
 	position: absolute;
-
 	top: 32%;
     width: 100%;
 	z-index: -1;
@@ -97,18 +114,30 @@ body {
     top: 550px;
     left: 100px;
 	z-index: 5;
-	background: green;
+	/*background: green;*/
 }
 
 #adventureIsland {
 	position: absolute;
-	top:-200px;
+	top:-125px;
 	right: -200px;
 	width:512px;
-	height:512px;
+	height:310px;
 	margin: 1% auto;
 	background: url('../../img/choose/adventure island.png') left center;
 	animation: adventure 1.5s steps(4) infinite;
+	pointer-events: none;
+}
+
+#adventureIslandTitle {
+	position: absolute;
+	top: -100px;
+	font-weight: bold;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 150%;
+	z-index: 1;
+	opacity: 0;
 	pointer-events: none;
 }
 
@@ -128,6 +157,41 @@ body {
 }
 
 
+#adventureIslandContainer:hover #adventureIslandTitle {
+	animation: adventuretitlehover 0.5s  infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation: adventuretitlehover 0.5s  infinite;
+	-moz-animation-timing-function: linear;
+}
+
+@keyframes adventuretitlehover {
+    0% {
+        -webkit-transform: scale(1.0);
+		opacity: 1; 
+    }
+	50% {
+		-webkit-transform: scale(1.1);
+	}
+	100%{
+		-webkit-transform: scale(1.0);
+		opacity: 1; 
+	}
+}
+
+@-moz-keyframes adventuretitlehover {
+    0% {
+        -moz-transform: scale(1.0);
+		opacity: 1; 
+    }
+	50% {
+		-moz-transform: scale(1.1);
+	}
+	100%{
+		-moz-transform: scale(1.0);
+		opacity: 1; 
+	}
+}
+
 #playtimeIslandContainer {
 	width:200px;
 	height:200px;
@@ -135,18 +199,31 @@ body {
     top: 550px;
     right: 200px;
 	z-index: 5;
-	background: green;
+	/*background: green;*/
 }
 
 #playtimeIsland {
 	position: absolute;
-	top:-200px;
+	top:-50px;
 	right: -200px;
 	width:512px;
-	height:512px;
+	height:218px;
 	margin: 1% auto;
 	background: url('../../img/choose/playtime island.png') left center;
 	animation: playtime 1.5s steps(4) infinite;
+	pointer-events: none;
+}
+
+#playtimeIslandTitle{
+	position: absolute;
+	top: -100px;	
+	right: -100px;
+	font-weight: bold;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 150%;
+	z-index: 1;
+	opacity: 0;
 	pointer-events: none;
 }
 
@@ -160,11 +237,48 @@ body {
 	animation: playtimehover 1.5s steps(4) infinite;
 }
 
+
 @keyframes playtimehover {
 	0% { background-position: 2048px; }
 	50% { opacity: 0.5; }
 	100% { background-position: 0; }	
 }
+
+#playtimeIslandContainer:hover #playtimeIslandTitle {
+	animation: playtimetitlehover 0.5s  infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation: playtimetitlehover 0.5s  infinite;
+	-moz-animation-timing-function: linear;
+}
+
+@keyframes playtimetitlehover {
+    0% {
+        -webkit-transform: scale(1.0);
+		opacity: 1; 
+    }
+	50% {
+		-webkit-transform: scale(1.1);
+	}
+	100%{
+		-webkit-transform: scale(1.0);
+		opacity: 1; 
+	}
+}
+
+@-moz-keyframes playtimetitlehover {
+    0% {
+        -moz-transform: scale(1.0);
+		opacity: 1; 
+    }
+	50% {
+		-moz-transform: scale(1.1);
+	}
+	100%{
+		-moz-transform: scale(1.0);
+		opacity: 1; 
+	}
+}
+
 
 #sleeptimeIslandContainer {	
 	width:200px;
@@ -173,7 +287,7 @@ body {
     top: 350px;
     right: 450px;
 	z-index: 5;
-	background: green; 
+	/*background: green;*/
 }
 
 #sleeptimeIsland {
@@ -185,6 +299,19 @@ body {
 	margin: 1% auto;
 	background: url('../../img/choose/sleeptime island.png') left center;
 	animation: sleeptime 1.5s steps(4) infinite;
+	pointer-events: none;
+}
+
+#sleeptimeIslandTitle{
+	position: absolute;
+	top: -100px;
+	right: -30px;
+	font-weight: bold;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 150%;
+	z-index: 1;
+	opacity: 0;
 	pointer-events: none;
 }
 
@@ -202,4 +329,39 @@ body {
 	0% { background-position: 1900px; }
 	50% { opacity: 0.5; }
 	100% { background-position: 0; }	
+}
+
+#sleeptimeIslandContainer:hover #sleeptimeIslandTitle {
+	animation: sleeptimetitlehover 0.5s  infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation: sleeptimetitlehover 0.5s  infinite;
+	-moz-animation-timing-function: linear;
+}
+
+@keyframes sleeptimetitlehover {
+    0% {
+        -webkit-transform: scale(1.0);
+		opacity: 1; 
+    }
+	50% {
+		-webkit-transform: scale(1.1);
+	}
+	100%{
+		-webkit-transform: scale(1.0);
+		opacity: 1; 
+	}
+}
+
+@-moz-keyframes sleeptimetitlehover {
+    0% {
+        -moz-transform: scale(1.0);
+		opacity: 1; 
+    }
+	50% {
+		-moz-transform: scale(1.1);
+	}
+	100%{
+		-moz-transform: scale(1.0);
+		opacity: 1; 
+	}
 }

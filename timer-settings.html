@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer Settings</title>
+    <link href="css/parent-portal/time.css" rel="stylesheet">
+   
+</head>
+
+<body oncontextmenu="return false">
+
+<a href="parent-portal.html">
+    <div id="back"></div>
+	</a>
+	
+    <div id="background">
+	<br>Time Settings
+	
+		<div id="box">
+			
+		<div id="textsmall">Maximim Daily Hours</div>
+		
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			<label class="onoffswitch-label" for="myonoffswitch">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+
+		<div class="range-slider">
+		  <input class="range-slider__range" type="range" value="2" min="0" max="24" step="1">
+		  <span class="range-slider__value">0</span>
+		  
+		</div>
+		
+		<div id="textsmall"><br><u>Time Lockout</u><br>
+		From:
+		<form>
+		<input type="time" name="usr_time" placeholder='09:00 AM'>
+		</form>
+		To:
+		<form>
+		<input type="time" name="usr_time">
+		</form>
+		</div>
+		
+		<div id="alignright">
+		
+		<u>Day Lockout</u>
+		<form>
+		<input type="checkbox" name="day" value="Monday"> Monday<br>
+		<input type="checkbox" name="day" value="Tuesday"> Tuesday<br>
+		<input type="checkbox" name="day" value="Wednesday"> Wednesday<br>
+		<input type="checkbox" name="day" value="Thursday"> Thursday<br>
+		<input type="checkbox" name="day" value="Friday" checked> Friday<br>
+		<input type="checkbox" name="day" value="Saturday" checked> Saturday<br>
+		<input type="checkbox" name="day" value="Sunday" checked> Sunday<br>
+		</form>
+		</div>
+		
+		</div>
+	
+    </div>
+	
+	<!-- fade in-->
+<script language="javascript">
+$(document).ready(function(){
+
+/*! Fades in whole page on load */
+$('body').css('display', 'none');
+$('body').fadeIn(500);
+
+}); 
+
+/*! Reloads page on every visit */
+function Reload() {
+try {
+var headElement = document.getElementsByTagName("head")[0];
+if (headElement && headElement.innerHTML)
+headElement.innerHTML += "<meta http-equiv=\"refresh\" content=\"1\">";
+}
+catch (e) {}
+}
+
+/*! Reloads on every visit in mobile safari */
+if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
+window.onpageshow = function(evt) {
+if (evt.persisted) {
+document.body.style.display = "none";
+location.reload();
+}
+};
+}
+</script>
+	
+	<!-- fade  -->
+	<script language="javascript">
+
+ $('a').click(function(e) {
+ e.preventDefault();
+ newLocation = this.href;
+ $('body').fadeOut('slow', newpage);
+ });
+ function newpage() {
+ window.location = newLocation;
+ }
+
+ </script>
+	
+	
+	<script src='js/jquery213.js'></script>
+
+    <script src="js/timeScript.js"></script>
+    
+	<!-- stops opening pages in new tabs  -->
+    <div id="follower">
+        <div id="owl">
+        </div>
+    </div>
+    <script language="javascript">
+        $('a').click(function (e){  
+        if (e.ctrlKey) {
+        return false;
+        }
+        });
+    </script> 
+    <script language="javascript">
+        $('a').click(function (e){  
+        if (e.shiftKey) {
+        return false;
+        }
+        });
+    </script> <!-- 
+<script language="javascript">
+document.onmousedown=disableclick;
+status="Right Click Disabled";
+function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+</script> -->
+</body>
+</html>
